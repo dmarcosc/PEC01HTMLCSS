@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin-block: 0px;
 }
 
 body {
@@ -7,51 +8,90 @@ body {
   flex-direction: column;
   height: 100vh;
   margin: 0;
-  padding: 2rem;
+  padding: 0 ;
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
+  background-color: $background-color;
+  color: $secondary-color;
 }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+h2{
+  font-size: 32px;
+  line-height: 28px;
+  span{
+    color:$highlight-color
+  }
+  margin: 50px 0px 10px 0px;
 }
-
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+.nav{
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  background-color: $primary-color;
+  &__container {
+    padding: 0 1em;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 1em auto;
+    @media screen and (min-width: 700px) {
+      margin: 1em 0 1em auto;
+    }
   }
 }
-
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
+.nav-link{
+  text-decoration: none;
+  &:visited,&:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+&:hover,&:active{
+  color: $background-color;
+}
 }
 
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+.portrait{
+  border-radius: 50%;
+  aspect-ratio: 400 / 500;
+  border: 5px solid $primary-color;
+}
+.resume{
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:15px;
+
+  h3{
+    color: $primary-color;
+  }
+  &__icons{
+    display: flex;
+    gap:10px;
+    a{
+      text-decoration: none;
+      &:visited,&:link {
+        text-decoration: inherit;
+        color: inherit;
+        cursor: pointer;
+    }
+    }
+}
+}
+
+section{
+  padding:1.5em 1em;
+}
+.flex__container{
+  display: flex;
+  flex-direction: column;
+    @media screen and (min-width: 900px) {
+      flex-direction: row;
+      justify-content: center;
+    }
 }

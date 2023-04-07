@@ -5,23 +5,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
+    <title>PEC01</title>
   </head>
   <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
+    <header>
+      <nav role="navigation" class="nav">    
+        <ul class="nav__container">   
+          <li class="nav__container--item"><a class="nav-link" href="#about" title="Localizacion">Localizacion</a>
+          </li>
+          <li class="nav__container--item"><a class="nav-link" href="#historia" title="Historia">Historia</a>
+          </li>
+          <li class="nav__container--item"><a class="nav-link" href="#building" title="Edificio">Edificio</a>
+          </li>
+          <li class="nav__container--item"><a class="nav-link" href="#culture" title="Cultura">Cultura</a>
+          </li>
+          <li class="nav__container--item"><a class="nav-link" href="#contact" title="Contacto">Contacto</a>
+          </li>    
+        </ul> 
+      </nav>
+      <div class="resume"> 
+        <img class="portrait" src="assets/images/catedral1.jpg" alt="catedral">
+        <h1>Santa Iglesia Catedral Basílica Metropolitana de
+          “San Salvador”</h1>
+        <h3>Oviedo</h3>
+        <div class="resume__icons"> 
+          <i class="fa fa-hospital" aria-hidden="true"></i>
+          <i class="fa fa-cross"></i>
+        </div> 
+      </div> 
+    </header> 
+    <include src="./views/about.html"></include>
+    <include src="./views/historia.html"></include>
+    <div class="flex__container">
+      <include src="./views/culture.html"></include>
+      <include src="./views/building.html"></include>
     </div>
-    <include src="./views/footer.html"></include>
+    <include src="./views/contact.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
   </body>
 </html>
+
